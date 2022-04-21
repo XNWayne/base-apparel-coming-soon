@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --pr-desaturatedred: hsl(0, 36%, 70%);
+  --pr-softred: hsl(0, 93%, 68%);
+
+  --ntl-darkred: hsl(0, 6%, 24%);
+
+  --lgt-main: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --lgt-sec: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  font-size: 1rem;
+  overflow-x: hidden;
+  background-color: #fff6f7;
+  text-align: center;
+  /* background-image: url(./assets/images/bg-pattern-desktop.svg); */
+  /* background-repeat: no-repeat; */
+  /* background-attachment: fixed; */
+  /* background-position: center center; */
+  /* background-size: cover; */
+  /* background-attachment: scroll; */
+}
+
+nav {
+  display: none;
+}
+
+@media (min-width: 780px) {
+  header {
+    display: none;
+  }
+  nav {
+    position: relative;
+    top: -2.5rem;
+    display: block;
+    width: max-content;
+  }
+
+  body {
+    background-image: url(./assets/images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    text-align: left;
+    overflow: hidden;
+  }
+
+  main {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+
+  #hero-mobile {
+    display: none;
+  }
+
+  #image {
+    width: 100%;
+    height: 42rem;
+    background-image: url(./assets/images/hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-right: -9.5rem;
+  }
+
+  #text {
+    width: 60rem;
+    margin: 0 0 0 10rem;
+  }
+
+  #text h1 {
+      line-height: 4rem;
+  }
+
+  #input {
+      height: 3.5rem;
+      width: 95%;
+      margin-top: 2rem;
+  }
+
+  #input button {
+      width: 9rem;
+  }
+
+  nav {
+      margin: 2.5rem 0;
+  }
+}
+
+@media (max-width: 780px) {
+  #text p {
+    padding: 0 2rem;
+  }
+
+  #input {
+    margin: 2.5rem auto 0.5rem auto;
+    width: 85%;
+    height: 3.5rem;
+  }
+
+  #input button {
+    width: 7rem;
+  }
+}
+
+header {
+  width: max-content;
+  padding: 2.5rem;
+}
+
+#image {
+  width: 100%;
+}
+
+#hero-mobile {
+  width: 100%;
+}
+
+#hero-desktop {
+  display: none;
+}
+
+#text {
+  margin-top: 5rem;
+}
+
+#text h1 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 3rem;
+  color: var(--ntl-darkred);
+  letter-spacing: 0.8rem;
+}
+
+#text h1 span {
+  font-weight: 300;
+  color: var(--pr-desaturatedred);
+}
+
+#text p {
+  color: var(--pr-desaturatedred);
+  letter-spacing: 0.08rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  /* padding: 0 2rem; */
+  /* width: 736.42px;
+  margin-inline: auto; */
+}
+
+#input {
+  border: 1px solid hsla(0, 36%, 70%, 0.438);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#input input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 3.5rem;
+  padding: 1rem 1rem 1rem 1.5rem;
+  background: transparent;
+  font-size: 1.1rem;
+  color: var(--ntl-darkred);
+}
+
+#input input::placeholder {
+  color: hsla(0, 36%, 70%, 0.37);
+  font-size: 1.1rem;
+}
+
+#input button {
+  cursor: pointer;
+  background: var(--lgt-sec);
+  border: none;
+  border-radius: 50px;
+  height: 3.6rem;
+  /*   */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 3px 73px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 3px 73px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 3px 73px 0px rgba(0, 0, 0, 0.1);
+  transition-duration: 800ms;
+}
+
+#input button:hover {
+  background-color: var(--pr-desaturatedred);
+  box-shadow: 0px 3px 29px 0px rgba(0, 0, 0, 0.59);
+  -webkit-box-shadow: 0px 3px 29px 0px rgba(0, 0, 0, 0.59);
+  -moz-box-shadow: 0px 3px 29px 0px rgba(0, 0, 0, 0.59);
+}
+
+#input button img {
+  height: 1.6rem;
+}
+
+.error {
+  display: none;
+}
+
+#invalid-email {
+  color: var(--pr-softred);
+  font-size: 0.8rem;
+  margin-left: 3.5rem;
+  display: none;
+}
+
+/* =====Attribution======= */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 2rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

@@ -4,29 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header>
+  <img src="./assets/images/logo.svg" alt="logo">
+</header>
 
-  We're coming soon
+<main>
+  <section id="image">
+    <img src="./assets/images/hero-mobile.jpg" alt="hero-mobile" id="hero-mobile">
+    <img src="./assets/images/hero-desktop.jpg" alt="hero-desktop" id="hero-desktop">
+  </section>
 
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
+  <section id="text">
+    <nav>
+    <img src="./assets/images/logo.svg" alt="logo">
+    </nav>
+    <h1><span>we're</span><br> coming<br>soon</h1>
+    <p>
+      Hello fellow shoppers! We're currently building our new fashion store. 
+      Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-  Email Address
-  
+      <div id="input">
+        <input type="email" name="useremail" id="user-email" placeholder="Email Address">
+        <img src="./assets/images/icon-error.svg" alt="icon-error" class="error">
+        <button><img src="./assets/images/icon-arrow.svg" alt=""></button>
+      </div>
+      <span id="invalid-email">Please provide a valid email</span>
+  </section>
+</main>
+
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Xander Wayne</a>.
     </p>
   </footer>
 </body>
